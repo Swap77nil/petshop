@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Claws | Premium Pet Shop & Adoption Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div class="announcement-content">
+        <span>🎉 Special Offer: Use code <strong>PAWSOME10</strong> for 10% OFF! Free shipping on orders over $50</span>
+        <div class="announcement-links">
+          <span><i class="fa-solid fa-phone"></i> (555) 839-7297</span>
+          <span><i class="fa-solid fa-location-dot"></i> 402 Elmwood Ave, Petville</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-paw"></i></div>
+        <div class="logo-text">
+          <span class="logo-title">Paws & Claws</span>
+          <span class="logo-tagline">Pet Emporium & Care</span>
+        </div>
+      </a>
+
+      <!-- Live Search Box -->
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search food, toys, beds, accessories..." autocomplete="off">
+        <button id="clearSearchBtn" class="clear-search hidden"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Shop</a></li>
+          <li><a href="#adopt" class="nav-link">Adopt <span class="badge-new">Love</span></a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="action-btn" id="wishlistHeaderBtn" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="action-badge" id="wishlistCount">0</span>
+        </button>
+
+        <button class="cart-btn" id="openCartBtn" title="Shopping Cart">
+          <div class="cart-icon-wrapper">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-badge" id="cartBadgeCount">0</span>
+          </div>
+          <div class="cart-amount-label">
+            <span class="cart-subtotal-text">Cart</span>
+            <span class="cart-total-header" id="headerCartTotal">$0.00</span>
+          </div>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <span class="drawer-title">Menu</span>
+      <button class="close-btn" id="closeMobileDrawer"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#products" class="mobile-nav-link">Shop Supplies</a></li>
+      <li><a href="#adopt" class="mobile-nav-link">Adopt a Pet</a></li>
+      <li><a href="#services" class="mobile-nav-link">Pet Services</a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Store & Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-award"></i> Award-Winning Pet Sanctuary & Supplies
+          </div>
+          <h1 class="hero-title">
+            Everything Your <span class="highlight-text">Best Friend</span> Truly Deserves.
+          </h1>
+          <p class="hero-description">
+            Discover premium organic foods, veterinary-approved wellness supplies, durable interactive toys, and adorable companions waiting for their forever homes.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-primary">
+              <i class="fa-solid fa-bag-shopping"></i> Shop Supplies
+            </a>
+            <a href="#adopt" class="btn btn-secondary">
+              <i class="fa-solid fa-heart"></i> Meet Pets For Adoption
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">15,000+</span>
+              <span class="stat-label">Happy Pets</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Vet Certified</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">1,200+</span>
+              <span class="stat-label">Adopted Pets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-card">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Happy Golden Retriever smiling" class="main-hero-img">
+            <div class="floating-badge badge-top-left">
+              <div class="badge-icon green"><i class="fa-solid fa-shield-cat"></i></div>
+              <div>
+                <strong>Safe & Organic</strong>
+                <span>100% Natural Recipes</span>
+              </div>
+            </div>
+            <div class="floating-badge badge-bottom-right">
+              <div class="badge-icon orange"><i class="fa-solid fa-truck-fast"></i></div>
+              <div>
+                <strong>Same-Day Dispatch</strong>
+                <span>Free on orders over $50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Propositions / Perks -->
+    <section class="perks-section">
+      <div class="container">
+        <div class="perks-grid">
+          <div class="perk-card">
+            <div class="perk-icon-box"><i class="fa-solid fa-truck"></i></div>
+            <div class="perk-info">
+              <h3>Free Express Delivery</h3>
+              <p>Lightning fast shipping on all orders $50+</p>
+            </div>
+          </div>
+          <div class="perk-card">
+            <div class="perk-icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+            <div class="perk-info">
+              <h3>Vet-Approved Care</h3>
+              <p>Nutrition & toys certified by professionals</p>
+            </div>
+          </div>
+          <div class="perk-card">
+            <div class="perk-icon-box"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+            <div class="perk-info">
+              <h3>30-Day Guarantee</h3>
+              <p>Hassle-free replacement or full refund</p>
+            </div>
+          </div>
+          <div class="perk-card">
+            <div class="perk-icon-box"><i class="fa-solid fa-headset"></i></div>
+            <div class="perk-info">
+              <h3>24/7 Pet Helpline</h3>
+              <p>Dedicated pet care specialists ready to assist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop / Products Section -->
+    <section class="products-section" id="products">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="sub-heading">Featured Catalog</span>
+            <h2 class="section-heading">Top Pet Supplies & Nutrition</h2>
+          </div>
+          <p class="section-subtitle">
+            Handpicked essentials designed for optimal pet health, vitality, and endless playtime happiness.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="catalog-controls">
+          <div class="category-filters" id="categoryFilters">
+            <button class="filter-chip active" data-category="all">All Items</button>
+            <button class="filter-chip" data-category="dogs">🐶 Dogs</button>
+            <button class="filter-chip" data-category="cats">🐱 Cats</button>
+            <button class="filter-chip" data-category="birds">🦜 Birds</button>
+            <button class="filter-chip" data-category="fish">🐠 Fish & Aquatics</button>
+            <button class="filter-chip" data-category="smallpets">🐹 Small Pets</button>
+          </div>
+
+          <div class="sort-controls">
+            <label for="sortSelect"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort by:</label>
+            <select id="sortSelect" class="sort-select">
+              <option value="popular">Most Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+
+        <!-- No Products Found State -->
+        <div class="empty-results hidden" id="noProductsFound">
+          <i class="fa-solid fa-paw empty-icon"></i>
+          <h3>No matching items found</h3>
+          <p>Try searching for a different keyword or resetting your category filter.</p>
+          <button class="btn btn-secondary" id="resetFiltersBtn">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet Adoption Showcase -->
+    <section class="adopt-section" id="adopt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">Find a Companion</span>
+          <h2 class="section-heading">Adopt a Loving Pet Today</h2>
+          <p class="section-subtitle">
+            Every pet deserves a loving family. All our rescue pals are fully health-checked, vaccinated, and microchipped.
+          </p>
+        </div>
+
+        <div class="adopt-grid" id="adoptGrid">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">Professional Care</span>
+          <h2 class="section-heading">Comprehensive Pet Services</h2>
+          <p class="section-subtitle">
+            From pampering spa sessions to certified training and comfortable boarding stays.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image-wrap">
+              <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=600&q=80" alt="Dog Grooming">
+              <span class="service-price">From $35</span>
+            </div>
+            <div class="service-content">
+              <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+              <h3>Luxury Grooming & Spa</h3>
+              <p>Hydrotherapy baths, gentle brushouts, nail trimming, ear cleaning, and styling with organic shampoos.</p>
+              <button class="btn btn-outline book-service-btn" data-service="Luxury Grooming & Spa">Book Appointment</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrap">
+              <img src="https://images.unsplash.com/photo-1628009368231-7bb3cfcb0def?auto=format&fit=crop&w=600&q=80" alt="Veterinary Health Check">
+              <span class="service-price">From $45</span>
+            </div>
+            <div class="service-content">
+              <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
+              <h3>Veterinary Wellness Check</h3>
+              <p>Comprehensive physical exams, parasite prevention, vaccine boosters, and nutritional consultation.</p>
+              <button class="btn btn-outline book-service-btn" data-service="Veterinary Wellness Check">Book Appointment</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrap">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80" alt="Dog Training">
+              <span class="service-price">From $60/hr</span>
+            </div>
+            <div class="service-content">
+              <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h3>Positive Behavior Training</h3>
+              <p>Puppy socialization, leash obedience, agility, and behavioral modification led by certified trainers.</p>
+              <button class="btn btn-outline book-service-btn" data-service="Positive Behavior Training">Book Appointment</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image-wrap">
+              <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=600&q=80" alt="Pet Hotel Daycare">
+              <span class="service-price">From $40/night</span>
+            </div>
+            <div class="service-content">
+              <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+              <h3>Luxury Boarding & Daycare</h3>
+              <p>Climate-controlled suites, supervised playgroups, webcams for pet parents, and bedtime cuddles.</p>
+              <button class="btn btn-outline book-service-btn" data-service="Luxury Boarding & Daycare">Book Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Customer Reviews -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="sub-heading">Testimonials</span>
+          <h2 class="section-heading">Loved by 15,000+ Pet Parents</h2>
+          <p class="section-subtitle">Real feedback from caring pet owners who trust Paws & Claws every single day.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "The salmon dog food cured my Golden's sensitive stomach within two weeks! Ordering is super seamless, and delivery was at my doorstep the same evening."
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah J.">
+              <div>
+                <strong>Sarah Jenkins</strong>
+                <span>Dog Mom to 'Cooper' (Golden Retriever)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "We adopted our calico kitten 'Cleo' through Paws & Claws. The adoption coordinator was compassionate, thorough, and provided us with a full starter kit!"
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David M.">
+              <div>
+                <strong>David Miller</strong>
+                <span>Adoptive Parent to 'Cleo'</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">
+              "Their grooming service is top notch. My poodle usually hates bath days, but here she walks out smelling amazing and wagging her tail happily!"
+            </p>
+            <div class="reviewer-meta">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Elena R.">
+              <div>
+                <strong>Elena Rostova</strong>
+                <span>Parent to 'Bella' (Toy Poodle)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA Banner -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-info">
+            <span class="newsletter-tag"><i class="fa-solid fa-gift"></i> Exclusive VIP Pet Club</span>
+            <h2>Get 15% Off Your Next Haul</h2>
+            <p>Join over 25,000 pet enthusiasts receiving weekly wellness tips, nutrition guides, and secret discounts.</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <div class="newsletter-input-group">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <span class="newsletter-disclaimer">We respect your privacy. No spam, just pawsome deals.</span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <div class="logo-icon"><i class="fa-solid fa-paw"></i></div>
+          <span class="footer-brand-title">Paws & Claws</span>
+        </div>
+        <p class="footer-desc">
+          Your neighborhood haven for quality pet products, thoughtful adoption matchmaking, and compassionate veterinary wellness care since 2018.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore Shop</h4>
+        <ul>
+          <li><a href="#products">Dog Nutrition & Toys</a></li>
+          <li><a href="#products">Cat Trees & Litter</a></li>
+          <li><a href="#products">Bird Cages & Seed</a></li>
+          <li><a href="#products">Aquatic Ecosystems</a></li>
+          <li><a href="#products">Small Pet Habitats</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#services">Hydrotherapy Grooming</a></li>
+          <li><a href="#services">Vet Health Consultations</a></li>
+          <li><a href="#services">Puppy Obedience Training</a></li>
+          <li><a href="#services">Daycare & Vacation Suites</a></li>
+          <li><a href="#adopt">Adoption Match Program</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Store & Hours</h4>
+        <div class="contact-details">
+          <p><i class="fa-solid fa-location-dot"></i> 402 Elmwood Ave, Petville, NY</p>
+          <p><i class="fa-solid fa-phone"></i> (555) 839-7297</p>
+          <p><i class="fa-solid fa-envelope"></i> hello@pawsandclaws.com</p>
+          <div class="store-hours">
+            <strong>Store Hours:</strong>
+            <span>Mon - Fri: 8:00 AM - 8:00 PM</span>
+            <span>Sat - Sun: 9:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 Paws & Claws Pet Emporium. All rights reserved.</p>
+        <div class="payment-badges">
+          <span class="pay-chip"><i class="fa-brands fa-cc-visa"></i> Visa</span>
+          <span class="pay-chip"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
+          <span class="pay-chip"><i class="fa-brands fa-cc-apple-pay"></i> Apple Pay</span>
+          <span class="pay-chip"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h3>Your Pet Cart</h3>
+        <span class="cart-item-count" id="cartDrawerCount">(0 items)</span>
+      </div>
+      <button class="cart-close-btn" id="closeCartBtn" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-box">
+      <div class="shipping-progress-text" id="shippingProgressText">
+        Add <strong>$50.00</strong> more to qualify for <strong>Free Shipping!</strong>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shippingProgressBar" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Items dynamically added here -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="promo-box">
+        <div class="promo-input-group">
+          <input type="text" id="promoInput" placeholder="Promo code (try PAWSOME10)">
+          <button class="btn btn-sm btn-outline" id="applyPromoBtn">Apply</button>
+        </div>
+        <div class="promo-message hidden" id="promoMessage"></div>
+      </div>
+
+      <div class="cart-summary-breakdown">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotalDisplay">$0.00</span>
+        </div>
+        <div class="summary-line discount-line hidden" id="cartDiscountRow">
+          <span>Discount (PAWSOME10)</span>
+          <span id="cartDiscountDisplay">-$0.00</span>
+        </div>
+        <div class="summary-line">
+          <span>Estimated Delivery</span>
+          <span id="cartShippingDisplay">$5.99</span>
+        </div>
+        <div class="summary-line">
+          <span>Tax (8%)</span>
+          <span id="cartTaxDisplay">$0.00</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Order Total</span>
+          <strong id="cartTotalDisplay">$0.00</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block checkout-trigger-btn" id="proceedToCheckoutBtn">
+        Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="btn btn-ghost btn-block" id="clearCartBtn">Clear Cart</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div class="modal-backdrop" id="checkoutModalBackdrop">
+    <div class="modal checkout-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-shield-halved"></i> Secure Pet Checkout</h3>
+        <button class="modal-close-btn" id="closeCheckoutModal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="modal-body" id="checkoutModalBody">
+        <form id="checkoutForm" class="checkout-form">
+          <div class="checkout-step-title">
+            <span class="step-num">1</span>
+            <h4>Delivery & Contact Information</h4>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custName">Full Name *</label>
+              <input type="text" id="custName" required placeholder="Alex Turner">
+            </div>
+            <div class="form-group">
+              <label for="custPhone">Phone Number *</label>
+              <input type="tel" id="custPhone" required placeholder="(555) 019-2834">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="custEmail">Email Address *</label>
+              <input type="email" id="custEmail" required placeholder="alex@example.com">
+            </div>
+            <div class="form-group">
+              <label for="petName">Pet Name(s) 🐾</label>
+              <input type="text" id="petName" placeholder="e.g. Buster & Daisy">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="custAddress">Delivery Address *</label>
+            <input type="text" id="custAddress" required placeholder="124 Pawprint Lane, Apt 4B">
+          </div>
+
+          <div class="checkout-step-title">
+            <span class="step-num">2</span>
+            <h4>Select Payment Method</h4>
+          </div>
+
+          <div class="payment-options">
+            <label class="pay-option active">
+              <input type="radio" name="paymentMethod" value="card" checked>
+              <span class="option-card">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Credit / Debit Card</span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="cod">
+              <span class="option-card">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+                <span>Cash on Delivery</span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="applepay">
+              <span class="option-card">
+                <i class="fa-brands fa-apple"></i>
+                <span>Apple / Google Pay</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="checkout-summary-box">
+            <div class="checkout-sum-row">
+              <span>Items in order:</span>
+              <span id="checkoutItemsCount">0 items</span>
+            </div>
+            <div class="checkout-sum-row final">
+              <strong>Amount to Pay:</strong>
+              <strong class="highlight-price" id="checkoutAmountToPay">$0.00</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block place-order-btn" id="placeOrderBtn">
+            <i class="fa-solid fa-lock"></i> Place Order Now
+          </button>
+        </form>
+
+        <!-- Order Success View (Hidden initially) -->
+        <div class="order-success-screen hidden" id="orderSuccessScreen">
+          <div class="success-icon-animation">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2>Woohoo! Order Confirmed 🎉</h2>
+          <p class="order-id-label">Order Number: <strong id="confirmedOrderId">#PC-89234</strong></p>
+          <p class="order-success-msg">
+            Thank you for pampering your pet! A receipt and real-time live tracking link have been dispatched to your email.
+          </p>
+          <div class="order-delivery-eta">
+            <i class="fa-solid fa-clock"></i> Estimated Delivery: <strong>Today within 3-4 Hours</strong>
+          </div>
+          <button class="btn btn-primary" id="continueShoppingAfterOrder">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-backdrop" id="quickViewBackdrop">
+    <div class="modal quick-view-modal">
+      <button class="modal-close-btn" id="closeQuickView"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body quick-view-grid" id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Pet Adoption Inquiry Modal -->
+  <div class="modal-backdrop" id="adoptModalBackdrop">
+    <div class="modal adopt-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-heart"></i> Pet Adoption Application</h3>
+        <button class="modal-close-btn" id="closeAdoptModal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="adopt-target-card" id="adoptTargetCard">
+          <!-- Pet summary dynamically injected -->
+        </div>
+        <form id="adoptInquiryForm" class="adopt-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="adopterName">Your Full Name *</label>
+              <input type="text" id="adopterName" required placeholder="Taylor Swift">
+            </div>
+            <div class="form-group">
+              <label for="adopterPhone">Phone Number *</label>
+              <input type="tel" id="adopterPhone" required placeholder="(555) 987-6543">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="adopterEmail">Email Address *</label>
+            <input type="email" id="adopterEmail" required placeholder="taylor@example.com">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="homeType">Residence Type</label>
+              <select id="homeType">
+                <option value="house-yard">Single Family House (Fenced Yard)</option>
+                <option value="house-noyard">House (No Yard)</option>
+                <option value="apartment">Apartment / Condo</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="petExperience">Pet Experience</label>
+              <select id="petExperience">
+                <option value="experienced">Experienced Pet Parent</option>
+                <option value="first-time">First-Time Pet Owner</option>
+                <option value="current-pets">Currently Have Other Pets</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="adoptReason">Tell us about your home & why you'd love to adopt *</label>
+            <textarea id="adoptReason" rows="3" required placeholder="We have lots of love, a spacious home, and plenty of time for walks and playtime!"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane"></i> Submit Adoption Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Booking Modal -->
+  <div class="modal-backdrop" id="serviceModalBackdrop">
+    <div class="modal service-modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-calendar-check"></i> Book a Pet Service</h3>
+        <button class="modal-close-btn" id="closeServiceModal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="serviceBookingForm" class="service-form">
+          <div class="form-group">
+            <label for="selectedService">Selected Service</label>
+            <input type="text" id="selectedService" readonly class="readonly-input">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ownerName">Owner Name *</label>
+              <input type="text" id="ownerName" required placeholder="Jamie Fox">
+            </div>
+            <div class="form-group">
+              <label for="ownerPhone">Phone Number *</label>
+              <input type="tel" id="ownerPhone" required placeholder="(555) 234-5678">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookedPetType">Pet Breed / Species *</label>
+              <input type="text" id="bookedPetType" required placeholder="e.g. Cockapoo, 3 years old">
+            </div>
+            <div class="form-group">
+              <label for="bookingDate">Preferred Date *</label>
+              <input type="date" id="bookingDate" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="specialNotes">Special Instructions or Medical Notes</label>
+            <textarea id="specialNotes" rows="2" placeholder="Sensitivities, behavioral notes, favorite treats..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-calendar-plus"></i> Confirm Appointment Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
